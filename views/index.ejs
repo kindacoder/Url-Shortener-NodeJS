@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    #main{
+      margin-top:10px;
+      height:100% !important
+
+    }
+    #inner{
+      height:400px;
+    }
+    .main-input{
+      margin-top:70px;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper ">
+            <a href="#!" class=" center brand-logo margin-4">UrlShortner</a>
+        </div>
+    </nav>
+
+
+    <!-- Page Layout here -->
+<div class="container">
+
+  <!-- Form with validation -->
+                <div id="main" class="col s12 m12 l6">
+                  <div id="inner" class="card-panel teal darken-3">
+                    <h4 class="header2">Enter the url to Sort</h4>
+                    <div class="row main-input">
+                      <form action="/shorten" method="POST" class="col s12">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <i class="fa fa-link prefix" aria-hidden="true"></i>
+                            <input id="name" name="url" type="text" class="validate">
+                            <label for="url">Enter the url to shorten...</label>
+                          </div>
+                        </div>
+
+                    <div class="row center">
+                            <div class="center input-field col s12 " style="margin-top:0px;">
+                              <button class="center btn cyan waves-effect waves-light right" type="submit" name="action">Shorten
+                                <i class="mdi-content-send right"></i>
+                                <i class="fa fa-arrow-right riht" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+      </div>
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".button-collapse").sideNav();
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" charset="utf-8"></script>
+
+</body>
+
+</html>
