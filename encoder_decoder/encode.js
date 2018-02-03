@@ -1,9 +1,17 @@
 ///generating the sorten url;
+var hasha=require('hasha');
 var encode = function(url) {
-    //encode the url- generate the random number and add some integer to them
-    //get random Character from url;
-    var randomCharacter = ((url.split('.')[1])[0]) + ((url.split('.')[1])[1]);
-    var randomNumber =  Math.floor((Math.random() * 100) + 3);
-    return randomCharacter + randomNumber;
+  ///using hasha to generate unique 3 digit letter:)
+var hash=hasha(url);
+///randomly choose 4 letters on hash by generating a number;
+var loop=3;
+var randomNumber;
+var shortenUrl=''
+while(loop){
+  randomNumber=Math.floor((Math.random() * 100));
+  shortenUrl+=hash[randomNumber];
+  loop=loop-1;
+}
+return shortenUrl;
 }
 module.exports=encode;
