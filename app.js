@@ -66,7 +66,13 @@ console.log(err);
       res.render('index');
     }
     else{
-      res.redirect(doc.originalUrl);
+      if(doc.originalUrl[0]=='w'){
+        res.redirect('http://'+doc.originalUrl)
+      }
+      else{
+        res.redirect(doc.originalUrl);
+      }
+
     }
   })
 })

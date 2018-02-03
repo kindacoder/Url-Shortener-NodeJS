@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    #main{
+      margin-top:0px;
+      height:100% !important
+
+    }
+    #inner{
+      height:330px;
+    }
+    .main-input{
+      margin-top:70px;
+    }
+    .page-footer{
+      margin-top:-40px;
+
+    }
+    .container{
+
+  width:95% !important
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper ">
+            <a href="#!" class=" center brand-logo margin-4">UrlShortner</a>
+        </div>
+    </nav>
+
+
+    <!-- Page Layout here -->
+<div class="container">
+
+  <!-- Form with validation -->
+                <div id="main" class="col s12 m12 l6">
+                  <div id="inner" class="card-panel white darken-3">
+                    <h4 class="header2">Enter the url to Sort</h4>
+                    <div class="row main-input">
+                      <form action="/shorten" method="POST" class="col s12">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <i class="fa fa-link prefix" aria-hidden="true"></i>
+                            <input id="name" name="url" type="text" class="validate">
+                            <label for="url">Enter the url to shorten...</label>
+                          </div>
+                        </div>
+
+                    <div class="row center">
+                            <div class="center input-field col s12 " style="margin-top:0px;">
+                              <button class="center btn cyan waves-effect waves-light right" type="submit" name="action">Shorten
+                                <i class="mdi-content-send right"></i>
+                                <i class="fa fa-arrow-right riht" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                            <div class="card-alert alert">
+                              <h4 red><%= message %></h4>
+                            </div>
+                          </div>
+                      </form>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Adding footer content  !-->
+                <footer class="page-footer">
+                       <div class="container">
+                         <div class="row">
+                           <div class="col l6 s12">
+                             <h5 class="white-text">Url Shortener</h5>
+                             <p class="grey-text text-lighten-4">You can Short your long url with the help of this Url Shortner.</p>
+                             <p>Please share it  in your friend circle</p>
+
+                             <br>
+                             <p>© 2017-18, All Rights Reserved</p>
+                           </div>
+                           <div class="col l4 offset-l2 s12">
+                             <h4>Developed by Ashutosh</h4>
+                             <h5 class="white-text"> Meet me here</h5>
+                             <ul>
+                               <li>
+                               <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/ashutosh1001/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i>   Linkedin</a>
+                           </li>
+                           <li><a class="grey-text text-lighten-3" href="https://github.com/kindacoder" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i> Github</a>
+                           </li>
+                           <li><a class="grey-text text-lighten-3" href="https://www.quora.com/profile/Ashutosh-Dwivedi-42" target="_blank"><i class="fa fa-quora" aria-hidden="true"></i> Quora</a>
+                           </li>
+
+                           <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/ashutosh.dwivedid" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i>  Facebook</a>
+                           </li>
+
+                             </ul>
+                           </div>
+                         </div>
+                       </div>
+
+                     </footer>
+
+
+              </div>
+
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".button-collapse").sideNav();
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" charset="utf-8"></script>
+
+</body>
+
+</html>
