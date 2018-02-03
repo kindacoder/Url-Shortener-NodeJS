@@ -24,21 +24,30 @@ app.get('/',function(req,res){
 //Handling the post request in the main setprototypeof
 app.post('/shorten',function(req,res){
   var originalUrl=req.body.url;
-  //passing the originalurl to encoder to get the shorten url;
-  var shortenUrl=encoder(originalUrl);
-  // console.log(shortenUrl);
-  //save the url in database-
-  var newUrl=new Url({
-    originalUrl:originalUrl,
-    shortenUrl:shortenUrl
-  }).save(function(err){
-    if(err){
-      console.log(err);
-    }
-    var shortenFullUrl='http://localhost:5100/'+shortenUrl;
-    // console.log(shortenFullUrl);
-    res.render('shorten',{shortenUrl:shortenFullUrl});
-  });
+///checkin gif the url is valid or not :)
+
+var regex = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})/
+  if(!regex.test(originalUrl)) {
+    res.render('error',{message:'not a valid url'})
+  } else {
+    //passing the originalurl to encoder to get the shorten url;
+    var shortenUrl=encoder(originalUrl);
+    // console.log(shortenUrl);
+    //save the url in database-
+    var newUrl=new Url({
+      originalUrl:originalUrl,
+      shortenUrl:shortenUrl
+    }).save(function(err){
+      if(err){
+        console.log(err);
+      }
+      var shortenFullUrl='http://localhost:5100/'+shortenUrl;
+      // console.log(shortenFullUrl);
+      res.render('shorten',{shortenUrl:shortenFullUrl});
+    });
+
+  }
+
 })
 
 
