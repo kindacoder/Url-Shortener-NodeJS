@@ -1,10 +1,24 @@
 var express=require('express');
 var app=express();
+//port setup
+var port=process.env.PORT || 5100;
 var bodyParser=require('body-parser');
 var mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost:27017/shortUrl');
 var encoder=require('./encoder_decoder/encode');
+
 var Url=require('./models/url')
+
+
+///requiring keys from config:
+var keys=require('./config/keys');
+mongoose.connect(keys.mongo.dbURL,function(){
+  console.log('database connected');
+});
+
+///connect to mongodb
+// console.log(keys.mongo.dbuser);
+// console.log(keys.mongo.dbpassword);
+
 
 
 ///using middleware
@@ -41,7 +55,8 @@ var regex = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[
       if(err){
         console.log(err);
       }
-      var shortenFullUrl='http://localhost:5100/'+shortenUrl;
+      // var shortenFullUrl='http://localhost:5100/'+shortenUrl;
+       var shortenFullUrl = req.protocol + '://' + req.get('host') +'/'+ shortenUrl;
       // console.log(shortenFullUrl);
       res.render('shorten',{shortenUrl:shortenFullUrl});
     });
@@ -77,6 +92,6 @@ console.log(err);
   })
 })
 
-app.listen(5100,function(){
-  console.log('Listening to port 5100')
+app.listen(port,function(){
+  console.log("Listening on port " + (process.env.PORT || "5100"));
 })
