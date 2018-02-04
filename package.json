@@ -4,7 +4,7 @@
   "description": "Url shortner with the help of MongoDB and Base58 decoder",
   "main": "app.js",
   "scripts": {
-    "test": ""
+    "start":"node app.js"
   },
   "author": "Ashutosh Dwivedi",
   "license": "ISC",
