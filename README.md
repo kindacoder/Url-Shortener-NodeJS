@@ -2,7 +2,7 @@
 In this repository I will be developing a url shortener service with the help of mongoDB database and basic encoding and decoding.
 ## A4Sshortener:
 A url shortener written in Nodejs with the help of *MongoDB* as a database and *EJS* as templating engine
-##Prerequisites:
+## Prerequisites:
 - NPM
 - NodeJS
 - Mongoodb
