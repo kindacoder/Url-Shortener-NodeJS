@@ -13,7 +13,7 @@
 
     }
     #inner{
-      height:330px;
+      height:380px;
     }
     .main-input{
       margin-top:70px;
@@ -27,7 +27,9 @@
   width:95% !important
 
     }
-
+   #alert{
+      color:#ff4c4c;
+    }
     </style>
 </head>
 
@@ -46,8 +48,14 @@
   <!-- Form with validation -->
                 <div id="main" class="col s12 m12 l6">
                   <div id="inner" class="card-panel white darken-3">
-                    <h4 class="header2">Enter the url to Sort</h4>
+                    <h4 class="header2">Enter the url to Shorten</h4>
+                    
                     <div class="row main-input">
+                        <center>
+                          <div class="card-alert alert">
+                            <h4 id="alert"><%= message %></h4>
+                          </div>
+                        </center>
                       <form action="/shorten" method="POST" class="col s12">
                         <div class="row">
                           <div class="input-field col s12">
@@ -56,16 +64,13 @@
                             <label for="url">Enter the url to shorten...</label>
                           </div>
                         </div>
-
+                        
                     <div class="row center">
                             <div class="center input-field col s12 " style="margin-top:0px;">
                               <button class="center btn cyan waves-effect waves-light right" type="submit" name="action">Shorten
                                 <i class="mdi-content-send right"></i>
                                 <i class="fa fa-arrow-right riht" aria-hidden="true"></i>
                               </button>
-                            </div>
-                            <div class="card-alert alert">
-                              <h4 red><%= message %></h4>
                             </div>
                           </div>
                       </form>
