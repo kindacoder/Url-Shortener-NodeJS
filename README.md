@@ -25,7 +25,7 @@ After installing all the dependencies start the server -
 npm start
 ```
 ## This project is available both on heroku and digitalocean. Links are given here :-
-[Website](http://a4s-shortener.herokuapp.com)
+[Website](http://let-me-short-it.herokuapp.com)
 
 [![Heroku](https://www.herokucdn.com/deploy/button.png)](http://let-me-short-it.herokuapp.com/)
 
