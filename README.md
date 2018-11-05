@@ -1,7 +1,7 @@
 # Url-Shortener-NodeJS (Url-shortener :- http://let-me-short-it.herokuapp.com)
 In this repository I will be developing a url shortener service with the help of mongoDB database and basic encoding and decoding.
 ## URL shortener:
-A url shortener written in Nodejs with the help of *MongoDB* as a database and *EJS* as templating engine
+A url shortener written in Nodejs with the help of *MongoDB* as a database and *EJS* as templating engine.
 ## Prerequisites:
 - NPM
 - NodeJS
