@@ -1,4 +1,12 @@
 # &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Url-Shortener-NodeJS](http://let-me-short-it.herokuapp.com)
+<br/>
+
+
+[![GitHub issues](https://img.shields.io/github/issues-raw/kindacoder/Url-Shortener-NodeJS.svg?style=for-the-badge)](https://github.com/kindacoder/Url-Shortener-NodeJS)
+
+
+
+<br/><br/>
 In this repository I will be developing a url shortener service with the help of mongoDB database and basic encoding and decoding.
 ## URL shortener:
 A url shortener written in Nodejs with the help of *MongoDB* as a database and *EJS* as templating engine.
